@@ -1,0 +1,19 @@
+### IDE
+.idea
+.vscode
+
+### Node
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+service-account.json
+
+# Optional npm cache directory
+.npm
+
+### Additional directories
+dist
