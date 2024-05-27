@@ -1,6 +1,6 @@
-{  
- "backend-service-url": "http://34.101.204.222/",
- "frontend-service-url": "http://submissionmlgc-faizalhusaina.et.r.appspot.com/",
- "project-id": "submissionmlgc-faizalhusaina",
- "bucket-name": "submissionmlgc-faizalhusaina"
+{
+    "backend-service-url": "http://34.128.77.145/",
+    "frontend-service-url": "http://submissionmlgc-faizalhusaina.et.r.appspot.com/",
+    "project-id": "submissionmlgc-faizalhusaina",
+    "bucket-name": "submissionmlgc-faizalhusaina"
 }
