@@ -29,14 +29,14 @@ async function postPredictHandler(request, h) {
             confidenceScore > 99
                 ? "Model is predicted successfully"
                 : "Model is predicted successfully but under threshold. Please use the correct picture",
-        data: data.history,
+        data: data,
     });
     response.code(201);
     return response;
 }
 async function getPredictHistoryHandler(request, h) {
     const data = await getData();
-    data.map((item) => {
+    const result = data.map((item) => {
         return {
             id: item.id,
             history: {
@@ -49,7 +49,7 @@ async function getPredictHistoryHandler(request, h) {
     });
     return h.response({
         status: "success",
-        data,
+        data: result,
     });
 }
 
