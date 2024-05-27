@@ -16,12 +16,9 @@ async function postPredictHandler(request, h) {
 
     const data = {
         id: id,
-        history: {
-            id: id,
-            result: result,
-            suggestion,
-            createdAt,
-        },
+        result: result,
+        suggestion,
+        createdAt,
     };
 
     await storeData(id, data);
@@ -39,6 +36,17 @@ async function postPredictHandler(request, h) {
 }
 async function getPredictHistoryHandler(request, h) {
     const data = await getData();
+    data.map((item) => {
+        return {
+            id: item.id,
+            history: {
+                id: item.id,
+                result: item.result,
+                suggestion: item.suggestion,
+                createdAt: item.createdAt,
+            },
+        };
+    });
     return h.response({
         status: "success",
         data,
